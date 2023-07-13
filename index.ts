@@ -3,6 +3,7 @@ import * as aws from "@pulumi/aws";
 
 // Create a book table
 const booksTable = new aws.dynamodb.Table("booksTable", {
+    name: "book",
     attributes: [{
         name: "id",
         type: "S",
@@ -13,6 +14,7 @@ const booksTable = new aws.dynamodb.Table("booksTable", {
 
 // Create a book entries table
 const bookEntriesTable = new aws.dynamodb.Table("bookEntriesTable", {
+    name: "bookEntry",
     attributes: [{
         name: "entryId",
         type: "S",
@@ -22,7 +24,7 @@ const bookEntriesTable = new aws.dynamodb.Table("bookEntriesTable", {
 });
 
 // Create an S3 bucket
-const bookFilesBucket = new aws.s3.Bucket("bookFilesBucket");
+const bookFilesBucket = new aws.s3.Bucket("bookFiles");
 
 // Export the names of the resources
 export const booksTableName = booksTable.name;
