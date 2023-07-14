@@ -1,1 +1,1 @@
-# BookBean
+# BookBeanInfrastructure
