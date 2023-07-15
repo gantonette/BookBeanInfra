@@ -3,7 +3,7 @@ import * as aws from "@pulumi/aws";
 
 // Create a book table
 const booksTable = new aws.dynamodb.Table("booksTable", {
-    name: "Book",
+    name: "book",
     attributes: [{
         name: "id",
         type: "S",
@@ -14,7 +14,7 @@ const booksTable = new aws.dynamodb.Table("booksTable", {
 
 // Create a book entries table
 const bookEntriesTable = new aws.dynamodb.Table("bookEntriesTable", {
-    name: "BookEntry",
+    name: "book-entry",
     attributes: [{
         name: "entryId",
         type: "S",
