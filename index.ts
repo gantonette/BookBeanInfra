@@ -24,7 +24,9 @@ const bookEntriesTable = new aws.dynamodb.Table("bookEntriesTable", {
 });
 
 // Create an S3 bucket
-const bookFilesBucket = new aws.s3.Bucket("book-entry-files");
+const bookFilesBucket = new aws.s3.Bucket("book-entry-files", {
+    bucket: "book-entry-files"
+});
 
 // Export the names of the resources
 export const booksTableName = booksTable.name;
