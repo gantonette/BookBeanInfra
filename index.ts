@@ -19,7 +19,7 @@ const bookEntriesTable = new aws.dynamodb.Table("bookEntriesTable", {
         name: "bookEntryId",
         type: "S",
     }],
-    hashKey: "entryId",
+    hashKey: "bookEntryId",
     billingMode: "PAY_PER_REQUEST",
 });
 
