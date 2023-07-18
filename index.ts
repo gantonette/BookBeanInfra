@@ -14,7 +14,7 @@ const booksTable = new aws.dynamodb.Table("booksTable", {
 
 // Create a book entries table
 const bookEntriesTable = new aws.dynamodb.Table("bookEntriesTable", {
-    name: "book-entry",
+    name: "bookEntry",
     attributes: [{
         name: "bookEntryId",
         type: "S",
